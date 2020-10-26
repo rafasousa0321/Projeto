@@ -6,7 +6,9 @@
     Formulário Submetido
 @endsection
 @section ('conteudo')
-    {{$nome}}<br>
-    {{$morada}}<br>
-    {{$automovel}}
+    <h5>Nome: </h5>{{$nome}}
+    <h5>Morada: </h5>{{$morada}}    
+    <h5>Data de Nascimento: </h5>{{$datanasc}}
+    <h5>Password: </h5>{{$password}}
+
 @endsection

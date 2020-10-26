@@ -19,7 +19,7 @@ class PortalController extends Controller
     }
 
     public function noticias(){
-        return view ('noticias', ['noticias'=>$this->sites]);
+        return view ('noticias', ['sites'=>$this->sites]);
     }
 
     public function empresa(){
@@ -36,5 +36,18 @@ class PortalController extends Controller
 
     public function form(){
         return view ('formulario');
+    }
+
+    public function enviado(Request $request){
+        $nome = $request->nome;
+        $morada = $request->morada;
+        $datanasc = $request->datanasc;
+        $password = $request->password;
+        return view('enviado', [
+            'nome'=>$nome,
+            'morada'=>$morada,
+            'datanasc'=>$datanasc,
+            'password'=>$password
+        ]);
     }
 }

@@ -6,19 +6,28 @@
     Formulário
 @endsection
 @section ('conteudo')
-    <form method="post" action="{{route('enviado')}}">
-        @csrf
+<form method="post" action="{{route('enviado')}}">
+    @csrf
+  <div class="form-group">
     <label for="nome">Nome</label>
-    <input type="text" name="nome">
+    <input type="text" class="form-control" name="nome">
+  </div>
+  <div class="form-group">
     <label for="morada">Morada</label>
-    <input type="text" name="morada">
-    <label for="automovel">Automóvel</label>
-    <select name="automovel">
-        <option value="Bmw">Bmw</option>
-        <option value="audi">Audi</option>
-        <option value="Nissan">Nissan</option>
-        <option value="Volkswagen">Volkswagen</option>
+    <input type="text" class="form-control" name="morada">
+  </div>
+  <div class="form-group">
+    <label for="datanasc">Data de nascimento</label>
+    <select name="datanasc">
+        @for($i = 1900; $i < 2004; $i++)
+            <option value="{{$i}}">{{$i}}</option>
+        @endfor
     </select>
-    <button type="submit">enviar</button>
-    </form>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
 @endsection

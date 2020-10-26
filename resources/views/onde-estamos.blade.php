@@ -7,4 +7,6 @@
 @endsection
 @section ('conteudo')
     <h5>Pode-nos encontrar na nossa sede em Vida das Aves, na nossa página de facebook ou em www.jornaisdenoticias.pt.</h5>
+    <br>
+    <img src="{{asset('imagens\mapa.png')}}">
 @endsection

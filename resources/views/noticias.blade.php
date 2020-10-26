@@ -6,7 +6,7 @@
     Sites de Noticias
 @endsection
 @section ('conteudo')
-    @foreach($noticias as $noticias)
-        <h3>{{$sites}}</h3>
-    @foreach
+@foreach($sites as $site)
+        <h5><a href="{{$site}}">{{$site}}</h5>
+@endforeach
 @endsection
